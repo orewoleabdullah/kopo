@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navigation / Header -->
@@ -144,16 +145,33 @@
             </div>
         </section>
 
+        <!-- About Section -->
+        <section class="about-section" id="about">
+          <div class="about-container">
+            <div class="about-image">
+              <img src="assets/about-image.jpg" alt="A Nigerian student using a smartphone" class="about-image-element">
+            </div>
+            <div class="about-content">
+              <span class="section-tag">ABOUT KOPO</span>
+              <h2 class="about-title">Made for student life, not bank life.</h2>
+              <p>Kopo is a student-first finance experience built around how Nigerian students actually save, spend, and support each other — from group contributions to daily budgeting.</p>
+              <p>We're building a calmer, more social way to manage money that feels simple from day one and trustworthy enough for parents too.</p>
+              <a href="#cta" class="btn btn-primary">Join the Waitlist</a>
+            </div>
+          </div>
+        </section>
+
         <!-- Bottom Call to Action (Waitlist) Section -->
         <section class="cta-section" id="cta">
             <div class="cta-container">
                 <h2 class="cta-title">Finance that feels made for students.</h2>
                 <p class="cta-description">Join the waitlist and be part of a better financial experience for student life.</p>
-                <form class="cta-form">
+                <form class="cta-form" action="https://formspree.io/f/mwlpzayz" method="POST">
                     <label for="cta-email" class="visually-hidden">Email address</label>
-                    <input type="email" id="cta-email" placeholder="Enter your email address" required>
+                    <input type="email" name="email" id="cta-email" placeholder="Enter your email address" required>
                     <button type="submit" class="btn btn-white">Join Waitlist</button>
                 </form>
+                <p class="form-message" role="status" aria-live="polite"></p>
             </div>
         </section>
     </main>

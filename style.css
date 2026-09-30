@@ -22,6 +22,14 @@
 }
 
 /* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 90px;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
     color: var(--color-dark);
@@ -499,6 +507,60 @@ a {
     border: 0;
 }
 
+/* About Section */
+.about-section {
+    background-color: var(--color-white);
+    padding: 96px 24px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+}
+
+.about-image-element,
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+.about-content {
+    text-align: left;
+    max-width: 540px;
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--color-dark);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-gray);
+    margin-bottom: 16px;
+}
+
+.about-content .btn {
+    margin-top: 24px;
+}
+
 /* Call to Action Section */
 .cta-section {
     background-color: var(--color-primary);
@@ -567,6 +629,34 @@ a {
 
 .cta-form .btn-white:hover {
     background-color: #f1f5f9;
+}
+
+.cta-form .btn-white:disabled,
+.cta-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.cta-form .btn-white:disabled:hover,
+.cta-form button:disabled:hover {
+    background-color: var(--color-white);
+}
+
+.form-message {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    min-height: 24px;
+    line-height: 1.5;
+}
+
+.form-message.is-success {
+    color: var(--color-mint);
+}
+
+.form-message.is-error {
+    color: #ffd2d7;
 }
 
 /* Footer */
@@ -663,6 +753,34 @@ a {
     .value-prop-title,
     .cta-title {
         font-size: 32px;
+    }
+
+    /* About section: stack to 1 column, text first then image */
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-content {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .about-image-element,
+    .about-image img {
+        height: 320px;
+    }
+
+    .about-title {
+        font-size: 30px;
     }
 }
 
