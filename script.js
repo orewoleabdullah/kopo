@@ -35,7 +35,7 @@ if (form) {
             if (response.ok) {
                 form.reset();
                 if (message) {
-                    message.textContent = "You're on the waitlist! Check your inbox for confirmation. 🎉";
+                    message.textContent = "You're on the waitlist! 🎉";
                     message.classList.add('is-success');
                 }
             } else {
